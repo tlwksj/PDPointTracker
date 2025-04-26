@@ -54,11 +54,11 @@ body {
           }
           
           nav ul li:hover {
-            background-color: rgb(38, 41, 37);
+            background-color: rgb(34, 75, 20);
           }
           
           .active {
-            background-color: #580505;
+            background-color: #4fb92f;
             color: white;
           }
           
@@ -67,7 +67,7 @@ body {
           a {
             display: block;
             padding: 8px;
-            background-color: #2F2626;
+            background-color: #2a2f26;
             font-size: 1em !important;
           }
           
