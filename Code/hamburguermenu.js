@@ -2,10 +2,9 @@
 code done by Trishelle Leal **/
 
 function hamburger() {
-  var link = document.getElementById("links");
-  if (link.style.display == "block") {
-    link.style.display = "none";
-  } else {
-    link.style.display = "block";
-  }
+  var sidebar = document.getElementById("sidebar");
+  sidebar.classList.toggle("show");
+  sidebar.addEventListener("click", function() {
+    sidebar.classList.remove("show");
+});
 }

@@ -1,96 +1,357 @@
 /* Styling for the index page, maybe the rest of the pages
- Done by Trishelle Leal */
+Done by Trishelle Leal */
 
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+}
 body {
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: medium;
-  font-weight: normal;
-  background-color: whitesmoke;
+    margin: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    background-color: whitesmoke;
+    
+}
+ h1 {
+    font-size: 3em !important;
+    font-weight: bold !important;
+    color: #FFF !important;
+    text-align: center;
+}
 
-        }
-        h1 {
-            text-align: center;
-        }
-        .tracker-form {
-            max-width: 500px;
-            margin: 0 auto 20px;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        input, button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            font-size: 16px;
-        }
-        table {
-            width: 100%;
-            margin-top: 20px;
-            background: white;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 12px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-        .menu ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #2F2626;
-          
-          }
-          
-          ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-          }
-          
-          nav ul li:hover {
-            background-color: rgb(34, 75, 20);
-          }
-          
-          .active {
-            background-color: #4fb92f;
-            color: white;
-          }
-          
-          
-          
-          a {
-            display: block;
-            padding: 8px;
-            background-color: #2a2f26;
-            font-size: 1em !important;
-          }
-          
-          li a {
-            font-family: Arial, Helvetica, sans-serif;
-            display: block;
-            color: white;
-            font-weight: bold;
-            text-align: center;
-            padding: 6px 55px;
-            text-decoration: none;
-          }
-          
-          li a:hover {
-            background-color: #000;
-            color: white;
-          }
-          
-          .topnav a.icon {
-            background: black;
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 0;
-          }
-          
+ h2 {
+  font-size: 2em !important;
+  font-weight: bold !important;
+  margin-left: 20px !important;
+  padding: 3px !important;
+  color: #000000 !important;
+  margin-left: 1cm;
+}
+
+
+.menu .icon {
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    margin-left: 0.3cm
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: left 0.3s ease;
+    padding-top: 60px; 
+}
+
+
+#sidebar.show {
+    left: 0;
+}
+
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding-left: 20px;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 8px;
+}
+
+
+#sidebar ul li a.active {
+    background-color: #555;
+    padding: 8px;
+}
+
+table {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  background: white;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 2%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+thead tr th{
+  background-color: #2e7d32; 
+  text-align: center;
+  color: #000000;
+}
+
+th {
+  background-color: rgba(5, 5, 100, 95);
+  height: 35px;
+  border-bottom: 1px solid rgb(210, 220, 250);
+  color: rgb(120, 120, 120);
+  text-align: center;
+}
+
+td {
+  color: rgba(100, 100, 100, 60);
+  height: 30px;
+  border: 0.5px solid rgba(240, 240, 240, 10);
+  text-align: center;
+}
+
+tfoot {
+  font-weight: bold;
+}
+
+tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f0fdf4; /* light green */
+}
+
+tr:hover {
+  background-color: #7bbd67;
+}
+
+form{
+  margin-left: 0.75in;
+  margin-top: 0.5in;
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+}
+
+form h2 {
+  text-align: center;
+}
+
+form label {
+  font-weight: bold;
+  color: #333;
+}
+
+form input[type="text"],
+form select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 2rem;
+  transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form select:focus {
+  border-color: #55e02a;
+  outline: none;
+}
+
+form button {
+  padding: 0.8rem;
+  background-color: #55e02a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #3b701c;
+}
+
+.left{
+  margin-right: 0.75in;
+  margin-top: -4in;
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  float: right;
+
+}
+
+.left h2 {
+  text-align: center;
+}
+
+.left label {
+  font-weight: bold;
+  color: #333;
+}
+
+.left input[type="text"],
+.left select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 2rem;
+  transition: border-color 0.3s;
+}
+
+.left input[type="text"]:focus,
+.left select:focus {
+  border-color: #0077ff;
+  outline: none;
+}
+
+.left button {
+  padding: 0.8rem;
+  background-color: #55e02a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.left button:hover {
+  background-color: #3b701c;
+}
+
+
+.left2{
+  margin-right: 0.75in;
+  margin-top: -3.71in;
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  float: right;
+
+}
+
+.left2 h2 {
+  text-align: center;
+}
+
+.left2 label {
+  font-weight: bold;
+  color: #333;
+}
+
+.left2 input[type="text"],
+.left2 select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 2rem;
+  transition: border-color 0.3s;
+}
+
+.left2 input[type="text"]:focus,
+.left2 select:focus {
+  border-color: #55e02a;
+  outline: none;
+}
+
+.left2 button {
+  padding: 0.8rem;
+  background-color: #55e02a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.left2 button:hover {
+  background-color: #3b701c;
+}
+
+.search{
+  background: rgb(255, 255, 255);
+  width: 50%;
+  margin: auto;
+  border-collapse: collapse;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(255, 0, 179, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+.search h2 {
+  text-align: center;
+}
+.search label {
+  font-weight: bold;
+  color: #333;
+}
+
+.search input[type="text"],
+.search select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 2rem;
+  transition: border-color 0.3s;
+}
+
+.search input[type="text"]:focus,
+.search select:focus {
+  border-color: #55e02a;
+  outline: none;
+}
+
+.search button {
+  padding: 0.8rem;
+  background-color: #55e02a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search button:hover {
+  background-color: #3b701c;
+}

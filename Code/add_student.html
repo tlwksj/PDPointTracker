@@ -1,4 +1,5 @@
-<!DOCTYPE HTML>
+
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <!-- Author: Trishelle Leal -->
@@ -19,12 +20,40 @@
               </a>
               <div id="sidebar">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="add_student.html"> Students </a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="add_student.html" class="active"> Students </a></li>
                     <li><a href="add_student.html"> Events </a></li>
-                </ul>
+                </ul> lll
               </div>
           </nav>
-          <h1> PD point tracker </h1>
-    </body>
+    <h1> Search for a student</h1>
+
+    <h1> Register a new student</h1>
+    <?php
+    include 'config.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+
+    $sql = "INSERT INTO pdstudents (name, year, PDworth) VALUES (?,?,0)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $name, $year);
+    $stmt->execute();
+    $stmt->close();
+}
+?>
+    <form method="POST" action="">
+        <input type="text" name="name" placeholder="Student Name" required>
+        <label for="year">Year:</label>
+        <select name="year" id="year" required>
+            <option value="">--Select Year--</option>
+            <option value="Freshman">Freshman</option>
+            <option value="Sophomore">Sophomore</option>
+            <option value="Junior">Junior</option>
+            <option value="Senior">Senior</option>
+        </select><br><br>
+        <button type="submit">Add Student</button>
+    </form>
+    <br>
+</body>
 </html>
